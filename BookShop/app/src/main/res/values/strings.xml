@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">BookShop</string>
+    <string name="mainh1">Read and listen by subscription</string>
+    <string name="countofbooks">Count of books: </string>
+    <string name="countofaudiobooks">Count of audios: </string>
+    <string name="instagram" translatable="false">Instagram: @cobrich18</string>
+    <string name="dostavka">Delivery in Kazakhstan. Delivery points in Almaty, Astana, Karaganda, Temirtau, Ust-Kamenogorsk, Pavlodar, Petropavlovsk, Kostanai, Kokshetau, Aktobe, Atyrau, Aktau, Shymkent, Zhezkazgan, Stepnogorsk, Uralsk, Taraz, Kyzylorda, Balkhash, Semey, Ekibastuz, Schuchinsk, Aksai, Taldykorgan, Akkol, Turkestan, Zhitikara, Rudny, Ridder, Saran, Satpayev.</string>
+    <string name="about">About: In November 2007, three friends, thinking how great it would be to shop from the comfort of their homes and offices, created the Samal.kz online store. And within a couple of days of opening, the first orders came in. Flip.kz, one of the first in Kazakhstan, turned over the idea of e-commerce and took leading positions in it. We offer a wide range of goods, high level of service and fast delivery.</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="signinh1">If you have an account: </string>
+    <string name="signinh2">If you do not have an account yet: </string>
+    <string name="signinlogin">Log In</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="lperror">Incorrect Login or Password!</string>
+    <string name="lperrornull">You write somewhere nothing!</string>
+    <string name="exists" translatable="false">This account already exists</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="not_found">Not Found!</string>
+    <string name="me">me</string>
+    <string name="samal_books">SAMAL BOOKS</string>
+    <string name="find_a_book">find a book</string>
+    <string name="find">FIND</string>
+    <string name="todo">TODO</string>
+    <string name="list_of_books">List of Books</string>
+    <string name="book_title">Book Title</string>
+    <string name="description">Description</string>
+    <string name="cost">Cost</string>
+    <string name="crud">crud</string>
+    <string name="exit">exit</string>
+    <string name="set_image">set image</string>
+    <string name="add_book">add book</string>
+    <string name="book_author">Book Author</string>
+    <string name="textview">TextView</string>
+    <string name="newbook">new book</string>
+    <string name="button">Button</string>
+    <string name="go_to">go to</string>
+    <string-array name="Formats">
+        <item>Formats</item>
+        <item>Delivery</item>
+        <item>Online PDF</item>
+        <item>Audio</item>
+    </string-array>
+    <string-array name="Genres">
+        <item>Genres</item>
+        <item>Action</item>
+        <item>Adventures</item>
+        <item>Fairy tales</item>
+        <item>Fantastic</item>
+        <item>Mystic</item>
+        <item>Novel</item>
+        <item>Detective</item>
+    </string-array>
+</resources>

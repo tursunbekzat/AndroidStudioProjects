@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "311682187035",
+    "firebase_url": "https://samalbooks-af153-default-rtdb.firebaseio.com",
+    "project_id": "samalbooks-af153",
+    "storage_bucket": "samalbooks-af153.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311682187035:android:1ebd03ec07d14f22921dbe",
+        "android_client_info": {
+          "package_name": "com.example.bookshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311682187035-caojfmlagl0em1mbovbofpdlfpljqv8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvVHHyWBmOilpH2TbqPVFY9xy_3Nb4U28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311682187035-caojfmlagl0em1mbovbofpdlfpljqv8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

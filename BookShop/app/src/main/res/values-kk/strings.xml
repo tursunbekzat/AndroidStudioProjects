@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BookShop</string>
+    <string name="mainh1">Қызыға оқыңыздар жәнеде тыңдаңыздар</string>
+    <string name="countofbooks">Кітаптар саны: </string>
+    <string name="countofaudiobooks">Аудиокітаптар саны: </string>
+    <string name="dostavka">Қазақстан бойынша жеткізу. Алматы, Астана, Қарағанды, Теміртау, Өскемен, Павлодар, Петропавл, Қостанай, Көкшетау, Ақтөбе, Атырау, Ақтау, Шымкент, Жезқазған, Степногорск, Орал, Тараз, Қызылорда, Балқаш, Семей, Екібастұз, Щучинск, Ақсай, Талдықорған, Ақкөл, Түркістан, Жітіқара, Рудный, Риддер, Саран, Сәтбаев.</string>
+    <string name="about">Біз жайлы: В ноябре 2007 года трое друзей, подумав о том, как здорово было бы совершать покупки не выходя из дома и офиса, создали сайт интернет-магазина Flip.kz. И уже через пару дней со дня открытия поступили первые заказы. Samal.kz, один из первых в Казахстане, перевернул представление об интернет-торговле и занял в ней лидирующие позиции. Мы предлагаем широкий ассортимент товаров, высокий уровень обслуживания и быструю доставку.</string>
+    <string name="signin">Кіру</string>
+    <string name="signup">Тіркелу</string>
+    <string name="signinh1">Аккакунтыңыз тіркелген болса, кіріңіз: </string>
+    <string name="signinh2">Әлі тіркелмеген болсаңыз, тіркелу үшін басыңыз: </string>
+    <string name="signinlogin">Кіру</string>
+    <string name="login">Логин</string>
+    <string name="password">Кілт сөз</string>
+    <string name="lperror">Логин не болмаса кілт сөз қате терілді!</string>
+    <string name="lperrornull">Сіз бір жолға ештеңе жазбадыңыз!</string>
+    <string name="name">Аты</string>
+    <string name="surname">Тегі</string>
+    <string-array name="Formats">
+        <item>Форматтар</item>
+        <item>Жеткізу</item>
+        <item>Онлайн ПДФ</item>
+        <item>Аудиожазба</item>
+    </string-array>
+    <string-array name="Genres">
+        <item>Жанрлар</item>
+        <item>Экшн</item>
+        <item>Шытырман оқиға</item>
+        <item>Ертегі</item>
+        <item>Ғажайып</item>
+        <item>Мистика</item>
+        <item>Роман</item>
+        <item>Із кесуші</item>
+    </string-array>
+    <string name="not_found">Табылмады</string>
+</resources>

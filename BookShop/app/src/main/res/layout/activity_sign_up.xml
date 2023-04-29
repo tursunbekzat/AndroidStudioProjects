@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_2"
+    tools:context=".SignUp">
+
+    <EditText
+        android:id="@+id/textname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgavatar"
+        app:layout_constraintStart_toStartOf="@+id/imgavatar"
+        app:layout_constraintTop_toBottomOf="@+id/imgavatar" />
+
+    <EditText
+        android:id="@+id/textsurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/surname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textname"
+        app:layout_constraintStart_toStartOf="@+id/textname"
+        app:layout_constraintTop_toBottomOf="@+id/textname" />
+
+    <EditText
+        android:id="@+id/textlogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/login"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textsurname"
+        app:layout_constraintStart_toStartOf="@+id/textsurname"
+        app:layout_constraintTop_toBottomOf="@+id/textsurname" />
+
+    <EditText
+        android:id="@+id/textpassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPersonName|textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textlogin"
+        app:layout_constraintStart_toStartOf="@+id/textlogin"
+        app:layout_constraintTop_toBottomOf="@+id/textlogin" />
+
+    <ImageView
+        android:id="@+id/imgavatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/b_singup_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSave"
+        android:text="@string/signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textpassword"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/textpassword"
+        app:layout_constraintTop_toBottomOf="@+id/textpassword"
+        app:layout_constraintVertical_bias="0.267" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/lperrornull"
+        android:textColor="#E60D0D"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/b_singup_signup"
+        app:layout_constraintEnd_toEndOf="@+id/textpassword"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/textpassword"
+        app:layout_constraintTop_toBottomOf="@+id/textpassword"
+        app:layout_constraintVertical_bias="0.23" />
+</androidx.constraintlayout.widget.ConstraintLayout>
