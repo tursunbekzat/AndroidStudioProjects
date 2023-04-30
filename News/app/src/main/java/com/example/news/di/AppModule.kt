@@ -17,7 +17,6 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-
 object AppModule {
 
     @Provides
@@ -41,6 +40,4 @@ object AppModule {
             .client(okHttpClient())
             .build()
             .create(NewsService::class.java)
-
-
 }

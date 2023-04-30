@@ -12,7 +12,7 @@ class MyDbManager(val context: Context) {
 
     private val myDbHelper = MyDbHelper(context)
     private var db:SQLiteDatabase? = null
-    private val books = mutableListOf<MutableList<String>>()
+//    private val books = mutableListOf<MutableList<String>>()
 
 
     fun openDb(){
@@ -52,15 +52,15 @@ class MyDbManager(val context: Context) {
         db?.insert(MyDbNameClass.TABLE_NAME1, null, values)
     }
 
-    fun insertToDbBook(title: String, author:String, description: String, cost: Double){
-        val values = ContentValues().apply {
-            put(MyDbNameClass.COLUMN_TITLE, title)
-            put(MyDbNameClass.COLUMN_AUTHOR, author)
-            put(MyDbNameClass.COLUMN_DESCRIPTION, description)
-            put(MyDbNameClass.COLUMN_COST, cost)
-        }
-        db?.insert(MyDbNameClass.TABLE_NAME2, null, values)
-    }
+//    fun insertToDbBook(title: String, author:String, description: String, cost: Double){
+//        val values = ContentValues().apply {
+//            put(MyDbNameClass.COLUMN_TITLE, title)
+//            put(MyDbNameClass.COLUMN_AUTHOR, author)
+//            put(MyDbNameClass.COLUMN_DESCRIPTION, description)
+//            put(MyDbNameClass.COLUMN_COST, cost)
+//        }
+//        db?.insert(MyDbNameClass.TABLE_NAME2, null, values)
+//    }
     
     fun readDbData():MutableList<MutableList<String>>{
         val dataList = mutableListOf<MutableList<String>>()
@@ -81,9 +81,17 @@ class MyDbManager(val context: Context) {
         return dataList
     }
 
+    fun isAdmin(login:String): Boolean {
+        return login == "tursunbekzat07@gmail.com"
+    }
+
+    fun closeDb(){
+        myDbHelper.close()
+    }
+
+
+    /*
     fun readDbDataBook(): MutableList<MutableList<String>>{
-//        MutableMap<String, Any>
-//        var booklist = mutableMapOf<String, Any>()
         val ids = ArrayList<String>()
         val titles = ArrayList<String>()
         val authors = ArrayList<String>()
@@ -98,11 +106,6 @@ class MyDbManager(val context: Context) {
                     val author = cursorbook.getString(kotlin.math.abs(cursorbook.getColumnIndex(MyDbNameClass.COLUMN_AUTHOR)))
                     val desc = cursorbook.getString(kotlin.math.abs(cursorbook.getColumnIndex(MyDbNameClass.COLUMN_DESCRIPTION)))
                     val cost = cursorbook.getString(kotlin.math.abs(cursorbook.getColumnIndex(MyDbNameClass.COLUMN_COST)))
-//                    ids.add(id.split(" ").toString())
-//                    titles.add(title.split(" ").toString())
-//                    authors.add(author.split(" ").toString())
-//                    descs.add(desc.split(" ").toString())
-//                    costs.add(cost.split(" ").toString())
                     ids.add(id.toString())
                     titles.add(title.toString())
                     authors.add(author.toString())
@@ -119,39 +122,35 @@ class MyDbManager(val context: Context) {
         cursorbook?.close()
         return books
     }
-    
-    fun closeDb(){
-        myDbHelper.close()
-    }
 
-//        fun updateBook(oldtitle:String, oldAuthor:String, title: String, author: String, description: String, cost: Double):Int? {
-//        val query =
-//            "SELECT COUNT(*) FROM ${MyDbNameClass.TABLE_NAME2} WHERE ${MyDbNameClass.COLUMN_TITLE} = ?"
-//        val selectionArgs = arrayOf(oldtitle)
-//        var res:Int? = null
-//        val cursor = db?.rawQuery(query, selectionArgs)
-//        cursor?.moveToFirst()
-//
-//        val count: Int? = cursor?.getInt(0)
-//
-//        if (count != null) {
-//
-//            val values = ContentValues().apply {
-//                put("title", title)
-//                put("author", author)
-//                put("description", description)
-//                put("cost", cost)
-//            }
-//            val selection = "${MyDbNameClass.COLUMN_TITLE} = ? AND ${MyDbNameClass.COLUMN_AUTHOR} = ?"
-//            val selectionArgs2 = arrayOf(oldtitle, oldAuthor)
-//            Log.d("MyLog", "updated book")
-//            res = db?.update(MyDbNameClass.TABLE_NAME2, values, selection, selectionArgs2)
-//        }
-//        Log.d("MyLog", "not updated book")
-//
-//        cursor?.close()
-//        return res
-//    }
+        fun updateBook(oldtitle:String, oldAuthor:String, title: String, author: String, description: String, cost: Double):Int? {
+        val query =
+            "SELECT COUNT(*) FROM ${MyDbNameClass.TABLE_NAME2} WHERE ${MyDbNameClass.COLUMN_TITLE} = ?"
+        val selectionArgs = arrayOf(oldtitle)
+        var res:Int? = null
+        val cursor = db?.rawQuery(query, selectionArgs)
+        cursor?.moveToFirst()
+
+        val count: Int? = cursor?.getInt(0)
+
+        if (count != null) {
+
+            val values = ContentValues().apply {
+                put("title", title)
+                put("author", author)
+                put("description", description)
+                put("cost", cost)
+            }
+            val selection = "${MyDbNameClass.COLUMN_TITLE} = ? AND ${MyDbNameClass.COLUMN_AUTHOR} = ?"
+            val selectionArgs2 = arrayOf(oldtitle, oldAuthor)
+            Log.d("MyLog", "updated book")
+            res = db?.update(MyDbNameClass.TABLE_NAME2, values, selection, selectionArgs2)
+        }
+        Log.d("MyLog", "not updated book")
+
+        cursor?.close()
+        return res
+    }
     fun updateBook(oldTitle: String, oldAuthor: String, newTitle: String, newAuthor: String, description: String, cost: Double): Int {
         db = myDbHelper.writableDatabase
         val values = ContentValues().apply {
@@ -167,12 +166,6 @@ class MyDbManager(val context: Context) {
         return res
     }
 
-
-
-    fun isAdmin(login:String): Boolean {
-        return login == "tursunbekzat07@gmail.com"
-//        return login == "il_mansurov@kbtu.kz"
-    }
 
     fun deleteBook(title:String, author:String):Boolean {
 
@@ -207,7 +200,6 @@ class MyDbManager(val context: Context) {
             if (cursor.moveToFirst()) {
                 do {
                     // Retrieve data from cursor
-//                    val column1Data:Int = cursor.getString(kotlin.math.abs(cursor.getColumnIndex("id"))).toString().toInt()
                     val column2Data = cursor.getString(kotlin.math.abs(cursor.getColumnIndex("title")))
                     val column3Data = cursor.getString(kotlin.math.abs(cursor.getColumnIndex("author")))
                     val column4Data = cursor.getString(kotlin.math.abs(cursor.getColumnIndex("description")))
@@ -219,5 +211,9 @@ class MyDbManager(val context: Context) {
         cursor?.close()
         return book
     }
+*/
+
+
+
 
 }
