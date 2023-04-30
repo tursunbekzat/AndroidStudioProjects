@@ -6,5 +6,5 @@ import retrofit2.http.GET
 interface Apinterface {
 
     @GET("/Elixirs")
-    suspend fun getData() : Call<List<Elixirs>>
+    suspend fun getData() : List<Elixirs>
 }

@@ -15,6 +15,6 @@ class MainActivity2 : AppCompatActivity( ) {
 
     private fun getData() {
 
-        RetrofitInstance.apinterface.getData()
+//        RetrofitInstance.apinterface.getData()
     }
 }
